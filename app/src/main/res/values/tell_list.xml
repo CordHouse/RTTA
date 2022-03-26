@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tell_List">
+        <item>"보험사 선택"</item>
+        <item>"메리츠화재"</item>
+        <item>"한화손해보험"</item>
+        <item>"롯데손해보험"</item>
+        <item>"그린손해보험"</item>
+        <item>"흥국화재"</item>
+        <item>"제일화재"</item>
+        <item>"삼성화재"</item>
+        <item>"현대해상"</item>
+        <item>"LIG손해보험"</item>
+        <item>"동부화재"</item>
+
+        <item>"교보AXA"</item>
+        <item>"AIG손해보험"</item>
+        <item>"ERGO다음"</item>
+        <item>"K손해보험"</item>
+        <item>"하이카다이렉트"</item>
+        <item>"한화생명(구.대한생명)"</item>
+        <item>"알리안츠생명보험"</item>
+        <item>"삼성생명보험"</item>
+        <item>"흥국생명"</item>
+        <item>"교보생명"</item>
+
+        <item>"우리아비바생명보험"</item>
+        <item>"미래에셋생명보험"</item>
+        <item>"kdb생명"</item>
+        <item>"동부생명"</item>
+        <item>"동양생명"</item>
+        <item>"푸르덴셜생명보험"</item>
+        <item>"신한생명보험"</item>
+        <item>"PCA생명"</item>
+        <item>"뉴욕라이프"</item>
+        <item>"ING생명보험"</item>
+
+        <item>"하나HSBC생명보험"</item>
+        <item>"KB생명보험"</item>
+        <item>"카디프생명보험"</item>
+        <item>"녹십자생명보험"</item>
+        <item>"라이나생명보험"</item>
+        <item>"AIA생명보험"</item>
+
+    </string-array>
+</resources>

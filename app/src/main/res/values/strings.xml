@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">traffic safety</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">로그인시 표현 위치</string>
+    <string name="nav_header_subtitle">연락처?</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">설정</string>
+
+    <string name="menu_main">메인</string>
+    <string name="menu_function1">기능1</string>
+    <string name="menu_function2">기능2</string>
+    <string name="menu_function3">기능3</string>
+    <string name="menu_function4">기능4</string>
+</resources>
