@@ -60,13 +60,6 @@ public class MainActivity_login extends AppCompatActivity {
         setContentView(binding_login.getRoot());
 
         setSupportActionBar(binding_login.appBarLoginMain.toolbarLogin);
-        binding_login.appBarLoginMain.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         DrawerLayout drawer = binding_login.loginDrawerLayout;
         NavigationView navigationView = binding_login.navLoginView;
 

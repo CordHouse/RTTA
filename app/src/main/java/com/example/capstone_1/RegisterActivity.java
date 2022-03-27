@@ -2,10 +2,12 @@ package com.example.capstone_1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -15,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.example.capstone_1.databinding.ActivityRegisterBinding;
+import com.example.capstone_1.databinding.AppBarRegisterBinding;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,14 +26,20 @@ import org.json.JSONObject;
 public class RegisterActivity extends AppCompatActivity{
     private EditText et_new_id, et_new_password, et_name, et_phone, et_company;
     private Button btn_new_register, btn_new_check;
+    private ImageButton imageButton_register_back;
     private Spinner spinner_tell;
     private AlertDialog dialog;
     private boolean validate = false;
+    private AppBarRegisterBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        binding = AppBarRegisterBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setSupportActionBar(binding.toolbarNewRegister);
 
         // 아이디 값 찾아주기
         et_new_id = findViewById(R.id.et_new_id);
@@ -39,6 +49,15 @@ public class RegisterActivity extends AppCompatActivity{
         et_company = findViewById(R.id.et_company);
         btn_new_check = findViewById(R.id.btn_new_check);
         spinner_tell = findViewById(R.id.spinner_tell);
+        imageButton_register_back = findViewById(R.id.image_register_back);
+
+        imageButton_register_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //아이디 중복 체크
         btn_new_check.setOnClickListener(new View.OnClickListener() {
@@ -145,6 +164,12 @@ public class RegisterActivity extends AppCompatActivity{
               queue.add(registerRequest);
           }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) { // nav_header 버튼 관리
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 }

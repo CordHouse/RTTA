@@ -3,19 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/ic_launcher_background_costum.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3764102564102564" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/rd_bt_backgound_line.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/rd_bt_background_line_b.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/round_bt_background_line.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/round_et_background_line.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3764102564102564" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_main_function1.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_menu_camera.xml" value="0.3764102564102564" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_menu_function2.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.3764102564102564" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_menu_person.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.3764102564102564" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/rd_bt_backgound_line.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/rd_et_backgound_line.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/side_nav_bar.xml" value="0.3764102564102564" />
-        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/activity_login.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/square_background_line.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/font/font.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/activity_main_login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/activity_password.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/activity_register.xml" value="0.31431159420289856" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/app_bar_login.xml" value="0.25" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/app_bar_main.xml" value="0.2957427536231884" />
-        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/app_bar_main_login.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/app_bar_main_login.xml" value="0.18" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/app_bar_register.xml" value="0.22" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/content_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/content_main_login.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/fragment_function1.xml" value="0.2046875" />
@@ -30,8 +44,10 @@
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/layout/nav_header_main_login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/activity_main_drawer.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/activity_main_drawer_login.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/appbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/main.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3764102564102564" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.38229166666666664" />
       </map>
     </option>
   </component>

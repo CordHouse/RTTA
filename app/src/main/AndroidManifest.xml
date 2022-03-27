@@ -33,12 +33,14 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar">
 
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar">
 
         </activity>
         <!--네비 헤더 할때 필수..-->

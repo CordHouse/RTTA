@@ -2,36 +2,60 @@ package com.example.capstone_1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
+import com.example.capstone_1.databinding.AppBarLoginBinding;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText et_id, et_password;
-    private Button btn_login_join, btn_go_register;
+    private Button btn_login_join; //btn_go_register;
+    private ImageButton imageButton_login_back;
+    private AppBarLoginBinding binding;
+    private TextView tv_idPw, tv_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        binding = AppBarLoginBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        setSupportActionBar(binding.toolbarNewLogin);
+
         et_id = findViewById(R.id.et_id);
         et_password = findViewById(R.id.et_password);
         btn_login_join = findViewById(R.id.btn_login_join);
-        btn_go_register = findViewById(R.id.btn_go_register);
+//        btn_go_register = findViewById(R.id.btn_go_register);
+        imageButton_login_back = findViewById(R.id.image_login_back);
 
-        //회원가입 버튼 클릭 시 수행
-        btn_go_register.setOnClickListener(new View.OnClickListener() {
+        tv_idPw = findViewById(R.id.tv_idPw);
+        tv_register = findViewById(R.id.tv_register);
+
+        //아이디 비밀번호 찾기
+        tv_idPw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //회원가입
+        tv_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
@@ -39,6 +63,25 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //메인으로
+        imageButton_login_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //회원가입 버튼 클릭 시 수행
+//        btn_go_register.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
+        //로그인
         btn_login_join.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,5 +120,12 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) { // nav_header 버튼 관리
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 }

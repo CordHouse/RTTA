@@ -7,9 +7,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">설정</string>
 
-    <string name="menu_main">메인</string>
-    <string name="menu_function1">기능1</string>
-    <string name="menu_function2">기능2</string>
-    <string name="menu_function3">기능3</string>
-    <string name="menu_function4">기능4</string>
+    <string name="menu_main">메인으로</string>
+    <string name="menu_function1">사고대처 방법</string>
+    <string name="menu_function2">응급처치 영상</string>
+    <string name="menu_function3">자동차 법률사이트</string>
+    <string name="menu_function4">길 찾기</string>
 </resources>
