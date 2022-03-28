@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search_ID_Pw_Activity"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+        android:id="@+id/image_search_back"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:src="@drawable/ic_menu_back"
+        app:tint="#000000" />
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.Capstone_1.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_new_search"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.Capstone_1.PopupOverlay"
+                android:theme="@style/font">
+            </androidx.appcompat.widget.Toolbar>
+            <!-- 바로 윗줄 폰트 적용 -->
+
+        </com.google.android.material.appbar.AppBarLayout>
+    </LinearLayout>
+
+    <include layout="@layout/activity_serach_id_pw" />
+
+</LinearLayout>

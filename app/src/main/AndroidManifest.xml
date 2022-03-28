@@ -51,6 +51,13 @@
             >
 
         </activity>
+        <activity
+            android:name=".Search_ID_Pw_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+
+        </activity>
     </application>
 
 </manifest>

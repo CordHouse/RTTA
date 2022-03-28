@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingLeft="65dp"
+    android:paddingRight="65dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/font"
+        android:text="@string/app_name"
+        android:textColor="#000000"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+<!--    android:padding="80dp"-->
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="190dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rd_et_background_line">
+
+        <EditText
+            android:id="@+id/et_search_Name"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rd_et_background_line"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:hint="Name"
+            android:textAlignment="textStart" />
+
+        <EditText
+            android:id="@+id/et_search_Phone"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/rd_et_background_line"
+            android:hint="Phone"/>
+
+
+        <Button
+            android:id="@+id/btn_search_ID"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rd_bt_background_line"
+            android:text="ID 찾기"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:padding="15dp"
+        android:background="@drawable/rd_et_background_line">
+
+        <EditText
+            android:id="@+id/et_search_ID_Pw"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rd_et_background_line"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:hint="ID"
+            android:textAlignment="textStart" />
+
+        <EditText
+            android:id="@+id/et_search_Name_Pw"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rd_et_background_line"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:hint="Name"
+            android:textAlignment="textStart" />
+
+        <EditText
+            android:id="@+id/et_search_Phone_Pw"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="10dp"
+            android:background="@drawable/rd_et_background_line"
+            android:hint="Phone"/>
+
+
+        <Button
+            android:id="@+id/btn_search_Pw"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rd_bt_background_line"
+            android:text="Password 찾기"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -23,7 +23,7 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText et_id, et_password;
-    private Button btn_login_join; //btn_go_register;
+    private Button btn_login_join;
     private ImageButton imageButton_login_back;
     private AppBarLoginBinding binding;
     private TextView tv_idPw, tv_register;
@@ -40,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
         et_id = findViewById(R.id.et_id);
         et_password = findViewById(R.id.et_password);
         btn_login_join = findViewById(R.id.btn_login_join);
-//        btn_go_register = findViewById(R.id.btn_go_register);
         imageButton_login_back = findViewById(R.id.image_login_back);
 
         tv_idPw = findViewById(R.id.tv_idPw);
@@ -50,7 +49,8 @@ public class LoginActivity extends AppCompatActivity {
         tv_idPw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(LoginActivity.this, Search_ID_Pw_Activity.class);
+                startActivity(intent);
             }
         });
 
@@ -71,15 +71,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        //회원가입 버튼 클릭 시 수행
-//        btn_go_register.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-//                startActivity(intent);
-//            }
-//        });
 
         //로그인
         btn_login_join.setOnClickListener(new View.OnClickListener() {
