@@ -23,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/nav_header_desc"
+            android:layout_marginTop="10dp"
             android:padding="2dp"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
             android:layout_marginRight="3dp"
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
-                android:layout_width="155dp"
+                android:layout_width="150dp"
                 android:layout_height="20dp"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
@@ -48,7 +49,7 @@
 
                 <TextView
                     android:id="@+id/tv_login_company"
-                    android:layout_width="100dp"
+                    android:layout_width="95dp"
                     android:layout_height="20dp"
                     android:text="입력company"
                     android:textAlignment="viewEnd"
@@ -56,7 +57,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:layout_width="155dp"
+                android:layout_width="150dp"
                 android:layout_height="20dp"
                 android:orientation="horizontal">
 
@@ -70,7 +71,7 @@
 
                 <TextView
                     android:id="@+id/tv_login_id"
-                    android:layout_width="100dp"
+                    android:layout_width="95dp"
                     android:layout_height="match_parent"
                     android:text="입력id"
                     android:textAlignment="viewEnd"
@@ -79,7 +80,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="155dp"
+                android:layout_width="150dp"
                 android:layout_height="20dp"
                 android:orientation="horizontal">
 
@@ -93,7 +94,7 @@
 
                 <TextView
                     android:id="@+id/tv_login_name"
-                    android:layout_width="114dp"
+                    android:layout_width="109dp"
                     android:layout_height="20dp"
                     android:text="입력name"
                     android:textAlignment="viewEnd"
@@ -105,10 +106,12 @@
 
 
     <TextView
+        android:id="@+id/tv_address_login"
         android:layout_width="230dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="6dp"
-        android:text="@string/nav_header_title"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:text="주소"
+        android:textSize="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#000000" />
 
