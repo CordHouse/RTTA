@@ -56,8 +56,59 @@
             android:exported="true"
             android:theme="@style/Theme.Capstone_1.NoActionBar"
             >
-
         </activity>
+        <activity
+            android:name=".function1_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <activity
+            android:name=".function2_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <activity
+            android:name=".function3_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <activity
+            android:name=".function4_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <activity
+            android:name=".function1_Activity_login"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <activity
+            android:name=".function2_Activity_login"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <activity
+            android:name=".function3_Activity_login"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <activity
+            android:name=".function4_Activity_login"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+        <!-- 네비게이션 검색 -->
+        <meta-data
+            android:name="android.app.searchable"
+            android:resource="@xml/searchable"/>
     </application>
 
 </manifest>

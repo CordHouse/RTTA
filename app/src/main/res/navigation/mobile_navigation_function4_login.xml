@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_function4_login"
+    app:startDestination="@+id/nav_function4_login">
+
+    <fragment
+        android:id="@+id/nav_main_login"
+        android:name="com.example.capstone_1.ui.main.mainFragment"
+        android:label="traffic safety"
+        tools:layout="@layout/fragment_main" />
+
+    <fragment
+        android:id="@+id/nav_function1_login"
+        android:name="com.example.capstone_1.ui.function1.function1Fragment"
+        android:label="traffic safety"
+        tools:layout="@layout/fragment_function1" />
+
+    <fragment
+        android:id="@+id/nav_function2_login"
+        android:name="com.example.capstone_1.ui.function2.function2Fragment"
+        android:label="traffic safety"
+        tools:layout="@layout/fragment_function2" />
+
+    <fragment
+        android:id="@+id/nav_function3_login"
+        android:name="com.example.capstone_1.ui.function3.function3Fragment"
+        android:label="traffic safety"
+        tools:layout="@layout/fragment_function3" />
+
+    <fragment
+        android:id="@+id/nav_function4_login"
+        android:name="com.example.capstone_1.ui.function4.function4Fragment"
+        android:label="traffic safety"
+        tools:layout="@layout/fragment_function4" />
+</navigation>

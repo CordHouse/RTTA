@@ -39,6 +39,12 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/rd_bt_background_line_b"
+        android:layout_margin="10dp"/>
+
     <TextView
         android:id="@+id/tv_address"
         android:layout_width="match_parent"
@@ -52,21 +58,22 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="200dp"
         android:orientation="horizontal">
         <ImageView
             android:id="@+id/img_weather"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="20dp"/>
 
         <LinearLayout
             android:layout_width="230dp"
             android:layout_height="170dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="10dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/rd_et_background_line">
             <TextView
                 android:id="@+id/tv_tmp"
                 android:layout_width="wrap_content"
@@ -75,7 +82,8 @@
                 android:textSize="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="20dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
 
             <LinearLayout
                 android:layout_width="230dp"
@@ -88,15 +96,18 @@
                     android:text="하늘상태"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
 
                 <TextView
+                    android:id="@+id/tv_slash1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="/"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
 
                 <TextView
                     android:id="@+id/tv_humidity"
@@ -105,7 +116,8 @@
                     android:text="습도"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
             </LinearLayout>
 
             <LinearLayout
@@ -119,15 +131,18 @@
                     android:text="강수확률"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
 
                 <TextView
+                    android:id="@+id/tv_slash2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="/"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
 
                 <TextView
                     android:id="@+id/tv_water"
@@ -136,7 +151,8 @@
                     android:text="강수량"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
             </LinearLayout>
 
             <LinearLayout
@@ -150,15 +166,18 @@
                     android:text="풍향"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
 
                 <TextView
+                    android:id="@+id/tv_slash3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="/"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
 
                 <TextView
                     android:id="@+id/tv_wsd"
@@ -167,17 +186,403 @@
                     android:text="풍속"
                     android:textSize="15dp"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
             </LinearLayout>
 
 
         </LinearLayout>
 
+
     </LinearLayout>
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/test"/>
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:background="@drawable/rd_et_background_line">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_pm10Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미세먼지(PM10)"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_slash4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_pm25Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미세먼지(PM25)"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_o3Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오존 농도"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_slash5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_o3Grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오존 지수"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_coValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일산화탄소 농도"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_slash6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_coGrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일산화탄소 지수"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_center_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/rd_bt_background_line_b"
+        android:layout_margin="10dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/tv_address_search"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dp"
+        android:text="주소"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:singleLine="true"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/img_weather_search"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/box3"
+            android:layout_width="230dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/rd_et_background_line"
+            android:visibility="invisible">
+            <TextView
+                android:id="@+id/tv_tmp_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기온"
+                android:textSize="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_sky_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="하늘상태"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_slash1_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_humidity_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="습도"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_waterPersent_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="강수확률"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_slash2_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_water_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="강수량"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="230dp"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_vec_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="풍향"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_slash3_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/tv_wsd_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="풍속"
+                    android:textSize="15dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/box4"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical"
+        android:background="@drawable/rd_et_background_line"
+        android:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_pm10Value_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미세먼지(PM10)"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_slash4_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_pm25Value_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미세먼지(PM25)"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_o3Value_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오존 농도"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_slash5_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_o3Grade_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오존 지수"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_coValue_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일산화탄소 농도"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_slash6_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_coGrade_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일산화탄소 지수"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+        </LinearLayout>
+    </LinearLayout>
 
 
 
