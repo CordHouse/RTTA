@@ -7,6 +7,8 @@
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3764102564102564" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/rd_bt_backgound_line.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/rd_bt_background_line_b.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/rd_et_background_line_subtitle.xml" value="0.225" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/rd_et_background_line_subtitle_nocheck.xml" value="0.225" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/round_bt_background_line.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable-v24/round_et_background_line.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3764102564102564" />
@@ -74,7 +76,7 @@
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/activity_main_drawer.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/activity_main_drawer_login.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/appbar.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/main.xml" value="0.1" />
+        <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/menu/main.xml" value="0.33" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3764102564102564" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/qkqkt/Desktop/capstone_1/app/src/main/res/xml/searchable.xml" value="0.1" />

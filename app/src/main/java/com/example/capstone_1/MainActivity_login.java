@@ -1,16 +1,21 @@
 package com.example.capstone_1;
 
+import static com.example.capstone_1.R.drawable.rd_et_background_line_subtitle;
+import static com.example.capstone_1.R.drawable.rd_et_background_line_subtitle_nocheck;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -39,6 +44,9 @@ import com.example.capstone_1.databinding.ActivityMainLoginBinding;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
@@ -95,6 +103,16 @@ public class MainActivity_login extends AppCompatActivity {
     private String html_search, url_m_search, address_search="", html_dust_search, url_d_search, Address_dust_sido_search="";
     private String[] Array_search, dust_list_search;
     private double search_lat, search_lon;
+
+    //뉴스
+    private HashMap<String, String> hashMap1 = new HashMap<>();
+    private String url_news="https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=100", news_text; // news default
+    private TextView tv_news;
+    private final Document[] document = new Document[6];
+    private final Elements[] elements = new Elements[6];
+    private Integer number = 0;
+    // sub title
+    private TextView tv_title1, tv_title2, tv_title3, tv_title4, tv_title5, tv_title6;
 
     String userID = "";
     String userPassword = "";
@@ -194,6 +212,17 @@ public class MainActivity_login extends AppCompatActivity {
             }
         });
 
+        hashMap1.put("정치", "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=100");
+        hashMap1.put("경제", "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=101");
+        hashMap1.put("사회", "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=102");
+        hashMap1.put("생활/문화", "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=103");
+        hashMap1.put("IT/과학", "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=105");
+        hashMap1.put("세계", "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=104");
+
+        tv_news = findViewById(R.id.tv_news);
+        getData1 getData1 = new getData1();
+        getData1.execute();
+
         final LocationManager lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
         // GPS 제공자의 정보가 바뀌면 콜백하도록 리스너 등록하기~!!!
@@ -262,6 +291,92 @@ public class MainActivity_login extends AppCompatActivity {
         v_center_line = findViewById(R.id.v_center_line);
         box3 = findViewById(R.id.box3);
         box4 = findViewById(R.id.box4);
+
+        tv_title1 = findViewById(R.id.tv_title1);
+        tv_title2 = findViewById(R.id.tv_title2);
+        tv_title3 = findViewById(R.id.tv_title3);
+        tv_title4 = findViewById(R.id.tv_title4);
+        tv_title5 = findViewById(R.id.tv_title5);
+        tv_title6 = findViewById(R.id.tv_title6);
+
+        tv_title1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getData1 getData1 = new getData1();
+                reset_title();
+
+                tv_title1.setBackgroundResource(rd_et_background_line_subtitle);
+                tv_title1.setTextColor(Color.parseColor("#5D02FF"));
+                number = 0;
+                getData1.execute();
+            }
+        });
+
+        tv_title2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getData1 getData1 = new getData1();
+                reset_title();
+
+                tv_title2.setBackgroundResource(rd_et_background_line_subtitle);
+                tv_title2.setTextColor(Color.parseColor("#5D02FF"));
+                number = 1;
+                getData1.execute();
+            }
+        });
+
+        tv_title3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getData1 getData1 = new getData1();
+                reset_title();
+
+                tv_title3.setBackgroundResource(rd_et_background_line_subtitle);
+                tv_title3.setTextColor(Color.parseColor("#5D02FF"));
+                number = 2;
+                getData1.execute();
+            }
+        });
+
+        tv_title4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getData1 getData1 = new getData1();
+                reset_title();
+
+                tv_title4.setBackgroundResource(rd_et_background_line_subtitle);
+                tv_title4.setTextColor(Color.parseColor("#5D02FF"));
+                number = 3;
+                getData1.execute();
+            }
+        });
+
+        tv_title5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getData1 getData1 = new getData1();
+                reset_title();
+
+                tv_title5.setBackgroundResource(rd_et_background_line_subtitle);
+                tv_title5.setTextColor(Color.parseColor("#5D02FF"));
+                number = 4;
+                getData1.execute();
+            }
+        });
+
+        tv_title6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getData1 getData1 = new getData1();
+                reset_title();
+
+                tv_title6.setBackgroundResource(rd_et_background_line_subtitle);
+                tv_title6.setTextColor(Color.parseColor("#5D02FF"));
+                number = 5;
+                getData1.execute();
+            }
+        });
+
         // 나오긴 하는데, 각자 어떤 역할인지 구분해서 나눠줘야함..
         new Thread(new Runnable() {
             @Override
@@ -327,7 +442,31 @@ public class MainActivity_login extends AppCompatActivity {
                                                 tv_tmp.setText(Array[i + 3].substring(3) + "°C");
                                                 break;
                                             case "VEC":
-                                                tv_vec.setText("풍향 : " + Array[i + 3].substring(3) + "m/s");
+                                                if(Integer.parseInt(Array[i + 3].substring(3)) > 237 && Integer.parseInt(Array[i + 3].substring(3)) <= 360 ||
+                                                        Integer.parseInt(Array[i + 3].substring(3)) >= 0 && Integer.parseInt(Array[i + 3].substring(3)) < 23){
+                                                    tv_vec.setText("풍향 : 북");
+                                                }
+                                                else if(Integer.parseInt(Array[i + 3].substring(3)) > 22 && Integer.parseInt(Array[i + 3].substring(3)) < 68){
+                                                    tv_vec.setText("풍향 : 북동");
+                                                }
+                                                else if(Integer.parseInt(Array[i + 3].substring(3)) > 67 && Integer.parseInt(Array[i + 3].substring(3)) < 113){
+                                                    tv_vec.setText("풍향 : 동");
+                                                }
+                                                else if(Integer.parseInt(Array[i + 3].substring(3)) > 112 && Integer.parseInt(Array[i + 3].substring(3)) < 158){
+                                                    tv_vec.setText("풍향 : 남동");
+                                                }
+                                                else if(Integer.parseInt(Array[i + 3].substring(3)) > 157 && Integer.parseInt(Array[i + 3].substring(3)) < 203){
+                                                    tv_vec.setText("풍향 : 남");
+                                                }
+                                                else if(Integer.parseInt(Array[i + 3].substring(3)) > 202 && Integer.parseInt(Array[i + 3].substring(3)) < 248){
+                                                    tv_vec.setText("풍향 : 남서");
+                                                }
+                                                else if(Integer.parseInt(Array[i + 3].substring(3)) > 247 && Integer.parseInt(Array[i + 3].substring(3)) < 293){
+                                                    tv_vec.setText("풍향 : 서");
+                                                }
+                                                else if(Integer.parseInt(Array[i + 3].substring(3)) > 292 && Integer.parseInt(Array[i + 3].substring(3)) < 238){
+                                                    tv_vec.setText("풍향 : 북서");
+                                                }
                                                 break;
                                             case "WSD":
                                                 tv_wsd.setText("풍속 : " + Array[i + 3].substring(3) + "m/s");
@@ -468,7 +607,31 @@ public class MainActivity_login extends AppCompatActivity {
                                                     tv_tmp_search.setText(Array_search[i + 3].substring(3) + "°C");
                                                     break;
                                                 case "VEC":
-                                                    tv_vec_search.setText("풍향 : " + Array_search[i + 3].substring(3) + "m/s");
+                                                    if(Integer.parseInt(Array[i + 3].substring(3)) > 237 && Integer.parseInt(Array[i + 3].substring(3)) <= 360 ||
+                                                            Integer.parseInt(Array[i + 3].substring(3)) >= 0 && Integer.parseInt(Array[i + 3].substring(3)) < 23){
+                                                        tv_vec_search.setText("풍향 : 북");
+                                                    }
+                                                    else if(Integer.parseInt(Array[i + 3].substring(3)) > 22 && Integer.parseInt(Array[i + 3].substring(3)) < 68){
+                                                        tv_vec_search.setText("풍향 : 북동");
+                                                    }
+                                                    else if(Integer.parseInt(Array[i + 3].substring(3)) > 67 && Integer.parseInt(Array[i + 3].substring(3)) < 113){
+                                                        tv_vec_search.setText("풍향 : 동");
+                                                    }
+                                                    else if(Integer.parseInt(Array[i + 3].substring(3)) > 112 && Integer.parseInt(Array[i + 3].substring(3)) < 158){
+                                                        tv_vec_search.setText("풍향 : 남동");
+                                                    }
+                                                    else if(Integer.parseInt(Array[i + 3].substring(3)) > 157 && Integer.parseInt(Array[i + 3].substring(3)) < 203){
+                                                        tv_vec_search.setText("풍향 : 남");
+                                                    }
+                                                    else if(Integer.parseInt(Array[i + 3].substring(3)) > 202 && Integer.parseInt(Array[i + 3].substring(3)) < 248){
+                                                        tv_vec_search.setText("풍향 : 남서");
+                                                    }
+                                                    else if(Integer.parseInt(Array[i + 3].substring(3)) > 247 && Integer.parseInt(Array[i + 3].substring(3)) < 293){
+                                                        tv_vec_search.setText("풍향 : 서");
+                                                    }
+                                                    else if(Integer.parseInt(Array[i + 3].substring(3)) > 292 && Integer.parseInt(Array[i + 3].substring(3)) < 238){
+                                                        tv_vec_search.setText("풍향 : 북서");
+                                                    }
                                                     break;
                                                 case "WSD":
                                                     tv_wsd_search.setText("풍속 : " + Array_search[i + 3].substring(3) + "m/s");
@@ -680,6 +843,23 @@ public class MainActivity_login extends AppCompatActivity {
         tv_slash4.setVisibility(View.VISIBLE);
         tv_slash5.setVisibility(View.VISIBLE);
         tv_slash6.setVisibility(View.VISIBLE);
+    }
+
+    // sub_title
+    private void reset_title(){
+        tv_title1.setBackgroundResource(rd_et_background_line_subtitle_nocheck);
+        tv_title2.setBackgroundResource(rd_et_background_line_subtitle_nocheck);
+        tv_title3.setBackgroundResource(rd_et_background_line_subtitle_nocheck);
+        tv_title4.setBackgroundResource(rd_et_background_line_subtitle_nocheck);
+        tv_title5.setBackgroundResource(rd_et_background_line_subtitle_nocheck);
+        tv_title6.setBackgroundResource(rd_et_background_line_subtitle_nocheck);
+
+        tv_title1.setTextColor(Color.parseColor("#000000"));
+        tv_title2.setTextColor(Color.parseColor("#000000"));
+        tv_title3.setTextColor(Color.parseColor("#000000"));
+        tv_title4.setTextColor(Color.parseColor("#000000"));
+        tv_title5.setTextColor(Color.parseColor("#000000"));
+        tv_title6.setTextColor(Color.parseColor("#000000"));
     }
 
     //날씨 https://textbox.tistory.com/13 참고자료
@@ -1306,5 +1486,93 @@ public class MainActivity_login extends AppCompatActivity {
             e.printStackTrace();
         }
         return resLocation;
+    }
+
+    // 오른쪽 상단 옵션 설정
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        url_news = "";
+        number = 0;
+        getData1 getData1 = new getData1();
+        switch (item.getItemId()){
+            case R.id.action_1:
+//                url_news = hashMap.get("정치");
+                number = 0;
+                getData1.execute();
+                return true;
+            case R.id.action_2:
+//                url_news = hashMap.get("경제");
+                number = 1;
+                getData1.execute();
+                return true;
+            case R.id.action_3:
+//                url_news = hashMap.get("사회");
+                number = 2;
+                getData1.execute();
+                return true;
+            case R.id.action_4:
+//                url_news = hashMap.get("생활/문화");
+                number = 3;
+                getData1.execute();
+                return true;
+            case R.id.action_5:
+//                url_news = hashMap.get("IT/과학");
+                number = 4;
+                getData1.execute();
+                return true;
+            case R.id.action_6:
+//                url_news = hashMap.get("세계");
+                number = 5;
+                getData1.execute();
+                return true;
+        }
+        return false;
+    }
+
+    private class getData1 extends AsyncTask<String, Void, String> {
+        // String 으로 값을 전달받은 값을 처리하고, Boolean 으로 doInBackground 결과를 넘겨준다.
+        private String[] text = new String[6];
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                document[0] = Jsoup.connect(hashMap1.get("정치")).get();
+                elements[0] = document[0].select(".cluster_text");
+
+                document[1] = Jsoup.connect(hashMap1.get("경제")).get();
+                elements[1] = document[1].select(".cluster_text");
+
+                document[2] = Jsoup.connect(hashMap1.get("사회")).get();
+                elements[2] = document[2].select(".cluster_text");
+
+                document[3] = Jsoup.connect(hashMap1.get("생활/문화")).get();
+                elements[3] = document[3].select(".cluster_text");
+
+                document[4] = Jsoup.connect(hashMap1.get("IT/과학")).get();
+                elements[4] = document[4].select(".cluster_text");
+
+                document[5] = Jsoup.connect(hashMap1.get("세계")).get();
+                elements[5] = document[5].select(".cluster_text");
+
+
+                for(int i = 0; i < 6; i++) {
+                    text[i] = elements[i].text();
+                }
+
+                return text[number];
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            tv_news = findViewById(R.id.tv_news);
+            tv_news.setText(text[number]);
+            tv_news.setEllipsize(TextUtils.TruncateAt.MARQUEE);
+            tv_news.setSelected(true);
+
+        }
     }
 }

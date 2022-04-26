@@ -10,8 +10,39 @@
         app:actionViewClass="android.widget.SearchView"/>
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_1"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="정치"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_2"
+        android:orderInCategory="100"
+        android:title="경제"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_3"
+        android:orderInCategory="100"
+        android:title="사회"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_4"
+        android:orderInCategory="100"
+        android:title="생활/문화"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_5"
+        android:orderInCategory="100"
+        android:title="IT/과학"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_6"
+        android:orderInCategory="100"
+        android:title="세계"
+        app:showAsAction="never" />
+
 </menu>
