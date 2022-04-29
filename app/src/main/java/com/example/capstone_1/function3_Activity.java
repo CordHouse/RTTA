@@ -5,6 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,11 +28,14 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.capstone_1.databinding.ActivityMainFunction3Binding;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.HashMap;
+
 public class function3_Activity extends AppCompatActivity {
 
     private ActivityMainFunction3Binding binding;
     private AppBarConfiguration mAppBarConfiguration;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +93,7 @@ public class function3_Activity extends AppCompatActivity {
                 return true;
             }
         });
+
     }
 
     //네비

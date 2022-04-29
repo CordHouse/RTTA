@@ -8,7 +8,13 @@ import android.renderscript.ScriptGroup;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,6 +30,8 @@ import com.example.capstone_1.databinding.ActivityMainBinding;
 import com.example.capstone_1.databinding.ActivityMainFunction1Binding;
 import com.example.capstone_1.databinding.FragmentFunction1Binding;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.HashMap;
 
 public class function1_Activity extends AppCompatActivity {
 
@@ -87,6 +95,7 @@ public class function1_Activity extends AppCompatActivity {
                 return true;
             }
         });
+
     }
 
     //네비

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="law_list">
+        <item>"주차 및 정차"</item>
+        <item>"고속도로 주의사항"</item>
+        <item>"저속전기자동차의 운행제한"</item>
+        <item>"벌칙"</item>
+        <item>"범칙금"</item>
+        <item>"과태료"</item>
+        <item>"교통사고 발생시 조치사항"</item>
+        <item>"교통사고 신고 및 조사"</item>
+        <item>"교통사고 책임 및 배상"</item>
+        <item>"교통사고 발생시 형사처벌"</item>
+        <item>"교통사고 발생시 손해배상"</item>
+    </string-array>
+</resources>
