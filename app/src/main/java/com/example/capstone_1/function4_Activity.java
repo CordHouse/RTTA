@@ -2,13 +2,18 @@ package com.example.capstone_1;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -23,6 +28,8 @@ public class function4_Activity extends AppCompatActivity {
 
     private ActivityMainFunction4Binding binding;
     private AppBarConfiguration mAppBarConfiguration;
+
+    private Button btn_login, btn_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +94,24 @@ public class function4_Activity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) { // nav_header 버튼 관리
         // Inflate the menu; this adds items to the action bar if it is present.
+        btn_login = findViewById(R.id.btn_login);
+        btn_register = findViewById(R.id.btn_register);
         getMenuInflater().inflate(R.menu.main, menu);
+        btn_login.setOnClickListener(new View.OnClickListener() { // 로그인
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(function4_Activity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_register.setOnClickListener(new View.OnClickListener() { // 회원가입
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(function4_Activity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
         return true;
     }
 

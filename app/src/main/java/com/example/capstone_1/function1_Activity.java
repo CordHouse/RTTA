@@ -38,6 +38,8 @@ public class function1_Activity extends AppCompatActivity {
     private ActivityMainFunction1Binding binding;
     private AppBarConfiguration mAppBarConfiguration;
 
+    private Button btn_login, btn_register;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,7 +104,24 @@ public class function1_Activity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) { // nav_header 버튼 관리
         // Inflate the menu; this adds items to the action bar if it is present.
+        btn_login = findViewById(R.id.btn_login);
+        btn_register = findViewById(R.id.btn_register);
         getMenuInflater().inflate(R.menu.main, menu);
+        btn_login.setOnClickListener(new View.OnClickListener() { // 로그인
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(function1_Activity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_register.setOnClickListener(new View.OnClickListener() { // 회원가입
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(function1_Activity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
         return true;
     }
 

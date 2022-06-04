@@ -4,12 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.function1.function1Fragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.function2.function2Fragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rd_et_background_line"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="교통사고 발생 시 대처방법"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="
+1. 사고 발생 즉시 인근 차량을 정차시킨다.\n
+> 단, 다른 차량의 진로가 방해되어 정차할 수 없다면 인근 \n
+장소를 찾아 주차해야한다. 그렇지 않고 장소를 벗어나면 \n
+뺑소니 사고로 적용된다.\n\n
+2. 차에서내려 상대방의 상해 정도를 확인한다.\n
+> 단, 도로위에 누워있는 사람을 무리하게 일으켜 세우거나\n
+차량안의 부상자를 나오게 하는 행위는 삼가해야 하며, 즉시\n
+119에 도움을 요청해야 한다.\n\n
+3. 보험회사와 경찰서에 사고 신고를 한다.\n
+> 단, 상대방이 보험에 가입되어 있다면 보험사를 불러야하며\n
+경미한 사고라도 보험처리를 하는 것이 좋다. (변심 방지)\n\n
+4.사고 현장을 보존하거나 증거사진을 확보한다.\n
+> 단, 카메라로 차량 손상 부위, 파손 정도, 형태 등을 꼼꼼하게\n
+찍어둬야 하고 주위의 신호등, 횡단보도 등 다른 배경이 포함\n
+되거나 차량 파편, 흘러나온 오일 및 냉각수, 보행자의 가방\n
+또는 신발이 포함되면 좋다.\n\n
+5.상대 차와 함께 안전한 장소로 이동한다.\n
+> 단, 상대가 수긍하지 않아 차량을 이동할 수 없을 경우 차에\n
+서 내려 교통저리를 해줘야 한다. 안전삼각대(주간 100m, \n
+야간 200m) 설치 후 안전 범위 내에 교통체증이 증가 하지\n
+않도록 해야한다."
+                    android:textColor="#000000" />
+            </LinearLayout>
+            <!--#FFEB3B -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_background_line"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_level1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="1\n단계" />
+
+                <Button
+                    android:id="@+id/btn_level2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="2\n단계" />
+
+                <Button
+                    android:id="@+id/btn_level3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="3\n단계" />
+
+                <Button
+                    android:id="@+id/btn_level4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="4\n단계" />
+
+                <Button
+                    android:id="@+id/btn_level5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="5\n단계" />
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:text="re\nset" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera" />
+
+            <Button
+                android:id="@+id/btn_youTube"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="차량대 차량 교통사고 대처"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/btn_youTube1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="차량대 사람 교통사고 대처"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

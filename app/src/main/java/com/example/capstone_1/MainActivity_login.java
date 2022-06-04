@@ -175,7 +175,7 @@ public class MainActivity_login extends AppCompatActivity {
                         intent_function1.putExtra("userCompany",userCompany);
                         intent_function1.putExtra("address", address);
                         startActivity(intent_function1);
-                        Toast.makeText(getApplicationContext(), "사고 대처 방법1", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "사고 대처 방법", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_function2_login:
                         Intent intent_function2 = new Intent(MainActivity_login.this, function2_Activity_login.class);
@@ -184,7 +184,7 @@ public class MainActivity_login extends AppCompatActivity {
                         intent_function2.putExtra("userCompany",userCompany);
                         intent_function2.putExtra("address", address);
                         startActivity(intent_function2);
-                        Toast.makeText(getApplicationContext(), "응급처치 영상1", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "응급처치 영상", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_function3_login:
                         Intent intent_function3 = new Intent(MainActivity_login.this, function3_Activity_login.class);
@@ -193,7 +193,7 @@ public class MainActivity_login extends AppCompatActivity {
                         intent_function3.putExtra("userCompany",userCompany);
                         intent_function3.putExtra("address", address);
                         startActivity(intent_function3);
-                        Toast.makeText(getApplicationContext(), "자동차 법률사이트1", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "자동차 법률사이트", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nav_function4_login:
                         Intent intent_function4 = new Intent(MainActivity_login.this, function4_Activity_login.class);
@@ -202,7 +202,7 @@ public class MainActivity_login extends AppCompatActivity {
                         intent_function4.putExtra("userCompany",userCompany);
                         intent_function4.putExtra("address", address);
                         startActivity(intent_function4);
-                        Toast.makeText(getApplicationContext(), "길 찾기1", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "길 찾기", Toast.LENGTH_SHORT).show();
                         break;
                 }
 

@@ -5,6 +5,10 @@ import static com.example.capstone_1.R.drawable.rd_et_background_line_subtitle_n
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,6 +19,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.MenuItem;
@@ -31,6 +36,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
@@ -110,6 +116,13 @@ public class MainActivity extends AppCompatActivity {
     private Integer number = 0;
     // sub title
     private TextView tv_title1, tv_title2, tv_title3, tv_title4, tv_title5, tv_title6;
+
+    //알림
+    NotificationManager manager;
+    NotificationCompat.Builder builder;
+
+    private static String CHANNEL_ID = "channel1";
+    private static String CHANEL_NAME = "Channel1";
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -196,6 +209,12 @@ public class MainActivity extends AppCompatActivity {
                 100, // 통지사이의 최소 시간간격 (miliSecond)
                 1, // 통지사이의 최소 변경거리 (m)
                 mLocationListener);
+
+        //알림
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("test");
+        showNoti(name);
+
 
         tv_date = findViewById(R.id.tv_date);
         tv_time = findViewById(R.id.tv_time);
@@ -1153,7 +1172,8 @@ public class MainActivity extends AppCompatActivity {
             tv_address.setText(address); // 주소 표시
             Array_dust = address.split(" ");
             address_dust_sido = Array_dust[1].substring(0,2);
-            address_dust_station = Array_dust[4];
+            address_dust_station = "고색동";
+//            address_dust_station = Array_dust[4];
 
             url_x = (int) Math.round(tmp.x);
             url_y = (int) Math.round(tmp.y);
@@ -1515,5 +1535,49 @@ public class MainActivity extends AppCompatActivity {
         }
         return resLocation;
     }
+    //알림
+    public void showNoti(String name){
+        builder = null;
+        manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        //버전 오레오 이상일 경우
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            manager.createNotificationChannel(
+                    new NotificationChannel(CHANNEL_ID, CHANEL_NAME, NotificationManager.IMPORTANCE_DEFAULT)
+            );
 
+            builder = new NotificationCompat.Builder(this,CHANNEL_ID);
+
+            //하위 버전일 경우
+        }else{
+            builder = new NotificationCompat.Builder(this);
+        }
+
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("name",name);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 101,
+                intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+
+
+        //알림창 제목
+        builder.setContentTitle("알림");
+
+        //알림창 메시지
+        builder.setContentText("알림 메시지");
+
+        //알림창 아이콘
+        builder.setSmallIcon(R.drawable.sun);
+
+        //알림창 터치시 상단 알림상태창에서 알림이 자동으로 삭제되게 합니다.
+        builder.setAutoCancel(true);
+
+        //pendingIntent를 builder에 설정 해줍니다.
+        //알림창 터치시 인텐트가 전달할 수 있도록 해줍니다.
+        builder.setContentIntent(pendingIntent);
+
+        Notification notification = builder.build();
+
+        //알림창 실행
+        manager.notify(1,notification);
+    }
 }

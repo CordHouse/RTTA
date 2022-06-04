@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.function2.function2Fragment">
 
-    <TextView
-        android:id="@+id/textSlideshow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="기능4"
-        android:textSize="30dp"
-        android:layout_margin="100dp"/>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".ui.function2.function2Fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
 </LinearLayout>

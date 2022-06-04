@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.capstone_1">
 
     <!--인터넷 권한 설정-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!--카메라 설정-->
+    <uses-feature android:name="android.hardware.camera2"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--사진 외장 메모리에 저장하기 위한 요청-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
@@ -105,6 +113,19 @@
             android:theme="@style/Theme.Capstone_1.NoActionBar"
             >
         </activity>
+        <activity
+            android:name=".youTube_Activity"
+            android:exported="true"
+            android:theme="@style/Theme.Capstone_1.NoActionBar"
+            >
+        </activity>
+
+        <!-- 구글지도 -->
+        <uses-library android:name="com.google.android.maps"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAQJx--Qa_FfTnmQ3YI67FXaSCqYQWz4vA" />
+
         <!-- 네비게이션 검색 -->
         <meta-data
             android:name="android.app.searchable"
